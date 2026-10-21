@@ -9,3 +9,5 @@
 @media(max-width:360px){.wrap{width:calc(100% - 36px)}.header{width:calc(100% - 36px)}.hero h1{font-size:41px}.hero-actions{gap:17px}.project-visual{aspect-ratio:1.35}.contact-email{font-size:21px}.lesson-preview>p{font-size:22px}.service-preview>p{font-size:21px}.guide-preview>p{font-size:24px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 @media print{body{background:#fff}.header,.footer,.resume-tools,.toast,.skip{display:none!important}.resume-shell{width:100%;max-width:none;padding:0}.resume-document{padding:0;border:0;box-shadow:none;font-size:10pt}.resume-document h1{font-size:25pt}.resume-document h2{font-size:10pt}.resume-document section{margin-top:22px}.resume-item{break-inside:avoid}.resume-item ul,.resume-item .summary,.resume-intro{font-size:10pt}.resume-document a{color:#000;text-decoration:none}@page{size:A4;margin:18mm}}
+
+.case-hero h1{text-wrap:balance}
