@@ -146,7 +146,7 @@ async function discoverBackend() {
       if (url.protocol !== 'https:' && !(local && url.protocol === 'http:' && ['127.0.0.1', 'localhost'].includes(url.hostname))) throw new Error('unsupported endpoint');
       backend = url.origin;
     } else if (local) backend = 'http://127.0.0.1:8771';
-    else { option.textContent = 'n8n 웹훅 · 브라우저 체험 이용 가능'; return; }
+    else { option.textContent = 'n8n 웹훅 · 로컬 환경에서 실행'; return; }
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 3500);
     try {
       const response = await fetch(`${backend}/api/health`, { signal: controller.signal, credentials: 'omit', redirect: 'error' });
