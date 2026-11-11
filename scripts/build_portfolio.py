@@ -49,6 +49,8 @@ for idx,c in enumerate(cases):
    content+='<div class="case-steps">'+''.join(f'<div class="case-step"><b>0{i}</b><h3>{e(x["title"])}</h3><p>{e(x["body"])}</p></div>' for i,x in enumerate(s['steps'],1))+'</div>'
   if s.get('image'):
    im=s['image'];content+=f'<figure class="evidence"><a href="../assets/{e(im["src"])}" data-lightbox aria-label="{e(im["caption"])} 확대"><img src="../assets/{e(im["src"])}" alt="{e(im["caption"])}" loading="lazy"></a><figcaption>{e(im["caption"])}</figcaption></figure>'
+  if s.get('image',{}).get('originalLink'):
+   content+=f'<p><a class="text-link" href="../assets/{e(s["image"]["src"])}" target="_blank" rel="noopener noreferrer">워크플로 원본 이미지 보기 {arrow}</a></p>'
   sections+=f'<section class="case-section" id="{e(s["id"])}"><span class="section-label">{e(s["label"])}</span><h2>{e(s["title"])}</h2>{content}</section>'
  if c.get('related'):
   related=''.join(f'<article class="related-experience"><h3>{e(x["title"])}</h3><p>{e(x["body"])}</p></article>' for x in c['related'])
