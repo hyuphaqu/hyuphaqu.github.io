@@ -92,6 +92,11 @@ demo_body=(ROOT/'scripts/templates/education-inquiry.html').read_text()
 demo_page=page('교육 문의 워크플로 데모 — 오정협',demo_body,2)
 demo_page=demo_page.replace('</head>','<link rel="stylesheet" href="../../assets/inquiry-demo.css"><script type="module" src="../../assets/inquiry-demo.js"></script></head>')
 save('demos/education-inquiry/index.html',demo_page)
-urls=['','resume/','demos/education-inquiry/']+[f'projects/{c["id"]}.html' for c in cases]
+# Selected customer growth and enablement experience.
+customer_growth_body=(ROOT/'scripts/templates/customer-growth.html').read_text()
+customer_growth_page=page('오정협 — 고객 성장과 기술 활용 지원',customer_growth_body,1)
+customer_growth_page=customer_growth_page.replace('</head>','<link rel="stylesheet" href="../assets/customer-growth.css"></head>')
+save('customer-growth/index.html',customer_growth_page)
+urls=['','resume/','customer-growth/','demos/education-inquiry/']+[f'projects/{c["id"]}.html' for c in cases]
 save('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://hyuphaqu.github.io/{u}</loc></url>' for u in urls)+'</urlset>\n')
 print(f'Generated public home, {len(cases)} case studies, resume and inquiry demo.')
