@@ -97,6 +97,11 @@ customer_growth_body=(ROOT/'scripts/templates/customer-growth.html').read_text()
 customer_growth_page=page('오정협 — 고객 성장과 기술 활용 지원',customer_growth_body,1)
 customer_growth_page=customer_growth_page.replace('</head>','<link rel="stylesheet" href="../assets/customer-growth.css"></head>')
 save('customer-growth/index.html',customer_growth_page)
-urls=['','resume/','customer-growth/','demos/education-inquiry/']+[f'projects/{c["id"]}.html' for c in cases]
+# Selected business process and AI systems experience.
+business_systems_body=(ROOT/'scripts/templates/business-systems.html').read_text()
+business_systems_page=page('오정협 — 업무 분석과 AI 시스템 기획',business_systems_body,1)
+business_systems_page=business_systems_page.replace('</head>','<link rel="stylesheet" href="../assets/customer-growth.css"><link rel="stylesheet" href="../assets/business-systems.css"></head>')
+save('business-systems/index.html',business_systems_page)
+urls=['','resume/','customer-growth/','business-systems/','demos/education-inquiry/']+[f'projects/{c["id"]}.html' for c in cases]
 save('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://hyuphaqu.github.io/{u}</loc></url>' for u in urls)+'</urlset>\n')
 print(f'Generated public home, {len(cases)} case studies, resume and inquiry demo.')

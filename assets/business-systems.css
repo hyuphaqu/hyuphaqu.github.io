@@ -1,0 +1,30 @@
+/* Reuses customer-growth.css; additions are scoped to the business systems page. */
+.business-systems .bs-overview{padding-bottom:43px}
+.business-systems .bs-overview .section-heading{margin-bottom:22px}
+.business-systems .bs-overview .section-heading h2{font-size:25px;margin-top:8px}
+.business-systems .bs-matrix{width:100%;border-collapse:collapse;text-align:left;table-layout:fixed}
+.business-systems .bs-matrix th,.business-systems .bs-matrix td{padding:20px 22px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px;line-height:1.85}
+.business-systems .bs-matrix thead th{font-size:11px;letter-spacing:.02em;color:var(--muted);background:var(--surface);border-top:1px solid var(--line);padding-block:14px}
+.business-systems .bs-matrix th:first-child{width:22%}
+.business-systems .bs-matrix th:nth-child(2){width:41%}
+.business-systems .bs-matrix tbody th{font-size:13px;font-weight:600;color:var(--ink)}
+.business-systems .bs-matrix td{color:var(--muted)}
+.business-systems .bs-source-note{font-size:11px;line-height:1.8;color:var(--soft);margin-top:15px}
+.business-systems .bs-comparison{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 25px}
+.business-systems .bs-comparison>div{padding:24px;background:var(--surface);border-radius:10px}
+.business-systems .bs-comparison>div:last-child{background:#f0f4ff}
+.business-systems .bs-comparison span{display:block;color:var(--soft);font-size:10px;letter-spacing:.08em;margin-bottom:9px}
+.business-systems .bs-comparison strong{display:block;font-size:14px;line-height:1.6}
+.business-systems .bs-comparison p{font-size:12px;line-height:1.8;margin-top:8px}
+.business-systems .bs-reconstruction-note{font-size:12px;line-height:1.8;padding:15px 18px;border-left:2px solid var(--blue);background:#f6f8ff;margin:-3px 0 26px}
+.business-systems .bs-requirements{display:grid;gap:16px}
+.business-systems .bs-requirements>section{border:1px solid var(--line);border-radius:12px;padding:24px}
+.business-systems .bs-requirements>section>span{font-size:9px;color:var(--soft);letter-spacing:.07em}
+.business-systems .bs-requirements h3{font-size:18px;margin:8px 0 18px}
+.business-systems .bs-requirements dl{display:grid;gap:13px}
+.business-systems .bs-requirements dl>div{display:grid;grid-template-columns:72px 1fr;gap:15px}
+.business-systems .bs-requirements dt{font-size:11px;font-weight:600;padding-top:2px}
+.business-systems .bs-requirements dd{font-size:13px;line-height:1.85;color:var(--muted)}
+.business-systems .bs-review-conclusion{font-size:13px;line-height:1.9;margin-top:24px}
+@media(max-width:600px){.business-systems .bs-overview{padding-bottom:29px}.business-systems .bs-overview .section-heading h2{font-size:23px;line-height:1.4}.business-systems .bs-matrix,.business-systems .bs-matrix tbody,.business-systems .bs-matrix tr,.business-systems .bs-matrix td,.business-systems .bs-matrix tbody th{display:block;width:100%}.business-systems .bs-matrix thead{display:none}.business-systems .bs-matrix tr{padding:17px 0 19px;border-top:1px solid var(--line)}.business-systems .bs-matrix tr:last-child{border-bottom:1px solid var(--line)}.business-systems .bs-matrix tbody th,.business-systems .bs-matrix td{border:0;padding:5px 0;font-size:14px}.business-systems .bs-matrix tbody th{font-size:16px;margin-bottom:7px}.business-systems .bs-matrix td::before{content:attr(data-label);display:block;font-size:10px;font-weight:600;color:var(--soft);margin:6px 0}.business-systems .bs-source-note{font-size:11px}.business-systems .bs-comparison{grid-template-columns:1fr;gap:10px;margin-top:23px}.business-systems .bs-comparison>div{padding:20px}.business-systems .bs-comparison strong{font-size:15px}.business-systems .bs-comparison p{font-size:13px}.business-systems .bs-reconstruction-note{font-size:12px;padding:14px 15px}.business-systems .bs-requirements>section{padding:20px}.business-systems .bs-requirements dl>div{grid-template-columns:1fr;gap:4px}.business-systems .bs-requirements dt{font-size:11px;color:var(--soft)}.business-systems .bs-requirements dd{font-size:14px}.business-systems .bs-review-conclusion{font-size:14px}}
+@media print{.business-systems .bs-overview{padding-bottom:20pt}.business-systems .bs-matrix th,.business-systems .bs-matrix td{font-size:9pt;padding:10pt}.business-systems .bs-requirements>section{break-inside:avoid}.business-systems .bs-reconstruction-note{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
